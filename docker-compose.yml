@@ -277,6 +277,11 @@ services:
       interval: 10s
       retries: 10
 
+## NOTE: in this file, we are running both webserver and scheduler in the same docker container.
+## BEST PRACTICE: we should not do this (above), this is just to keep things simple and reduce complexity of docker-compose file (i.e: this file is an EXAMPLE)
+
+## NOTE: all services, hive, spark, hdfs, airflow,etc are being triggered by this docker-compose file, and all of these docker containers will run in the same network defined below:
+
 ######################################################
 # NETWORK
 ######################################################
